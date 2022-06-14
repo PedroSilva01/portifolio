@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    max-width: 100vw;
+    max-height: 100vh;
+    text-decoration: none;
+    list-style: none;
+    background-color: #cfd8dc;
+}
+.cabecalho{
+    max-width: 100vw;
+    width: 100vw;
+    height: 12vh;
+    display: flex;
+    justify-content: space-between;
+}
+.logo-right {
+    width: 20vw;
+    display: flex;
+    justify-content: space-around;
+    justify-items: center;
+    align-items: center;
+    border: 1px solid black;
+}
+.logo-right span {
+    font-size: 35px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+    padding: 10px;
+}
+.logo-right span:hover{ /*tentar fazer o efeito de aparecer as letras embaixo do nome quando passar o mouse emcima*/
+    content: "Fullstack Developer";
+    color:#053144;
+}
+.img-logo{
+    margin: 0;
+    padding: 0;
+    width: 50%;
+}
+.img-logo img {
+    width: 4.5rem;
+    height: 4.5rem;
+}
+
+.nav-bar {
+    width: 60vw;
+    height: 100%;
+}
+.navigation {
+    height: 100%;
+    width: 100%;
+}
+.nav-itens {
+    display: flex;
+    height: 100%;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+}
+.nav-itens li a{
+    width: 25vw;
+    max-height: 100%;
+    border-radius: 35px;
+    padding: 18px 30px;
+    text-decoration: none;
+    color: black;
+    align-items: center;
+    justify-items: center;
+    border: 1px solid orangered;
+}
+.nav-itens li a:hover {
+    font-size: 20px;
+    border: 1px solid black;
+    background-color: #053144;
+    text-transform: capitalize;
+    color: white;
+    padding: 21px 40px;
+    transition: 0.7s;
+}
+.nav-itens li a:active{ /*fica feio tirar dps*/
+    background-color: burlywood;
+    color: red;
+    border: blue;
+    transition: 0.3s;
+}

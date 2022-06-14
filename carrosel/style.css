@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+#items-wrapper{
+    width: 50vw;
+}
+img {
+    width: 100%; /*fazendo a img respeitar o item pai dela*/
+    height: 100%;
+    object-fit: cover; /*faz a imagem ocupar todo o espaço para ela se deformar menos possivel*/
+}
+#items{
+    height: 400px;
+    display: flex; /*deixa as imagens lado a lado, fazendo eles se adaptarem para caberem dentro da caixa */    
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /*para ter crtz que vai funcionar em todos os navegadores*/
+    scroll-behavior: smooth; /*para que o comportamento do scroll seja suave*/
+    scroll-snap-type: x mandatory; /*para quando soltar o scroll a img se adapte a tela, porem precisa de mais 1 propriedade no item filho, ah e o "x" qier dizer que é no eixo x que ele vai se adaptar*/
+}
+#items::-webkit-scrollbar {
+    background: transparent; /*gambiarra para tirar a scrollbar, porem ela ainda está lá, e é estranho então é gambiarra*/
+}
+#item {
+    flex: none; /*desabilitando opções do flex de alargamento, alongamento e etc*/
+    width: 100%;
+    height: 400px;
+    scroll-snap-align: start; /*está dizendo que ele vai se alinhar ao inicio da imagem, vendd qual imagem está maior e esta vai ser ajustada na tela.*/
+    pointer-events: none; /*agr que o evento dele foi desativado, ele vai rodar no pai dele*/
+}

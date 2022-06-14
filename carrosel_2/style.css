@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.carrosel {
+    width: 400px;
+    height: 250px;
+    margin: 50px auto;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.7); /*o ultimo e opacidade*/
+    /**overflow: hidden; /*esconde os elementos que estao passando*/
+}
+.carrosel ul {
+    display: flex;
+    list-style: none;
+    width: 2400;
+    height: 250px;    
+}
+img {
+    width: 400px;
+    height: 250px;
+}
+.carrosel li{
+    position: relative;
+    animation: slide 15s infinite ease-out;
+
+}
+@keyframes slide {
+    0%{
+        left: 0px;
+    }
+    30%{
+        left: -400px;
+    }
+    50%{
+        left: -400px;
+    }
+    100%{
+        left: -800px;
+    }
+}
